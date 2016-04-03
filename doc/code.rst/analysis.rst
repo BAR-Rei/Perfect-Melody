@@ -1,0 +1,54 @@
+analysis package
+================
+
+Submodules
+----------
+
+analysis.analyzer module
+------------------------
+
+.. automodule:: analysis.analyzer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+analysis.fft_pda module
+-----------------------
+
+.. automodule:: analysis.fft_pda
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+analysis.pitch_analyser module
+------------------------------
+
+.. automodule:: analysis.pitch_analyser
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+analysis.pitch_cleaner module
+-----------------------------
+
+.. automodule:: analysis.pitch_cleaner
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+analysis.pitch_parser module
+----------------------------
+
+.. automodule:: analysis.pitch_parser
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: analysis
+    :members:
+    :undoc-members:
+    :show-inheritance:

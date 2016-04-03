@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>input_output package &mdash; documentation perfect_melody 1.0.0</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="documentation perfect_melody 1.0.0" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="input-output-package">
+<h1>input_output package<a class="headerlink" href="#input-output-package" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="module-input_output.email">
+<span id="input-output-email-module"></span><h2>input_output.email module<a class="headerlink" href="#module-input_output.email" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="input_output.email.Email">
+<em class="property">class </em><code class="descclassname">input_output.email.</code><code class="descname">Email</code><a class="headerlink" href="#input_output.email.Email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<blockquote>
+<div><p>Controller class, sends an email using a specified adress to the same address.</p>
+<dl class="staticmethod">
+<dt id="input_output.email.Email.extract_server">
+<em class="property">static </em><code class="descclassname">Email.</code><code class="descname">extract_server</code><span class="sig-paren">(</span><em>email_recipient</em><span class="sig-paren">)</span><a class="headerlink" href="#input_output.email.Email.extract_server" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Return the server part contained in the email_recipient.
+params:</p>
+<blockquote>
+<div>email_recipient (str) -&gt; sender&#8217;s adress</div></blockquote>
+<dl class="docutils">
+<dt>return:</dt>
+<dd>if the function recognizes a server in the adress, it returns the string containing the server
+else, it returns an empty string</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="input_output.email.Email.write_email">
+<em class="property">static </em><code class="descclassname">Email.</code><code class="descname">write_email</code><span class="sig-paren">(</span><em>email_recipient</em>, <em>email_password</em>, <em>score</em>, <em>email_subject='Perfect Melody MIDI file'</em><span class="sig-paren">)</span><a class="headerlink" href="#input_output.email.Email.write_email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Creates the email containing the midi file to send.
+The user sends an email to himself.
+params:</p>
+<blockquote>
+<div>email_recipient (str) -&gt; adress used to send and recieve the email
+email_password (str) -&gt; password of email account
+email_subject (str) -&gt; subject of the sent email
+score (music21.stream.Score) -&gt; the score to export at midi format</div></blockquote>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-input_output.recorder">
+<span id="input-output-recorder-module"></span><h2>input_output.recorder module<a class="headerlink" href="#module-input_output.recorder" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="input_output.recorder.Recorder">
+<em class="property">class </em><code class="descclassname">input_output.recorder.</code><code class="descname">Recorder</code><span class="sig-paren">(</span><em>fileName</em>, <em>rate=22050</em>, <em>chunksize=1024</em>, <em>channels=1</em><span class="sig-paren">)</span><a class="headerlink" href="#input_output.recorder.Recorder" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<blockquote>
+<div><p>Allows to start a record from a microphone and to stop it later.
+When the record is stopped, a WAV file is created.</p>
+<dl class="attribute">
+<dt id="input_output.recorder.Recorder.MIN_NUMBER_FRAME">
+<code class="descclassname">Recorder.</code><code class="descname">MIN_NUMBER_FRAME</code><em class="property"> = 5</em><a class="headerlink" href="#input_output.recorder.Recorder.MIN_NUMBER_FRAME" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="input_output.recorder.Recorder.getFrames">
+<code class="descclassname">Recorder.</code><code class="descname">getFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#input_output.recorder.Recorder.getFrames" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Returns the frames and resets their values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="input_output.recorder.Recorder.newFrame">
+<code class="descclassname">Recorder.</code><code class="descname">newFrame</code><span class="sig-paren">(</span><em>data</em>, <em>frame_count</em>, <em>time_info</em>, <em>status</em><span class="sig-paren">)</span><a class="headerlink" href="#input_output.recorder.Recorder.newFrame" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Creates a new frame and adds it to data saved.
+None and continue order is returned
+params:</p>
+<blockquote>
+<div>data (int) -&gt; the new data to add
+frame_count (int) -&gt; number of frames
+time_info -&gt; time information
+status -&gt; status information</div></blockquote>
+<dl class="docutils">
+<dt>return: </dt>
+<dd>Returns the tuple (None, pyaudio.paContinue) to make the record continue</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="input_output.recorder.Recorder.start">
+<code class="descclassname">Recorder.</code><code class="descname">start</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#input_output.recorder.Recorder.start" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Starts the recording
+params:</p>
+<blockquote>
+<div>args -&gt; some args can be given to the function, like the pressed button.</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="input_output.recorder.Recorder.stop">
+<code class="descclassname">Recorder.</code><code class="descname">stop</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#input_output.recorder.Recorder.stop" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Stops the recording and saves the wav file.
+params:</p>
+<blockquote>
+<div>args -&gt; some args can be given to the function, like the pressed button.</div></blockquote>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-input_output">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-input_output" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">input_output package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-input_output.email">input_output.email module</a></li>
+<li><a class="reference internal" href="#module-input_output.recorder">input_output.recorder module</a></li>
+<li><a class="reference internal" href="#module-input_output">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/code.rst/input_output.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Maud Beguey, Hugo Martin, Pierre-François Monville, Guilhem Piat.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/code.rst/input_output.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

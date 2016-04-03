@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>test.input_output package &mdash; documentation perfect_melody 1.0.0</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="documentation perfect_melody 1.0.0" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="test-input-output-package">
+<h1>test.input_output package<a class="headerlink" href="#test-input-output-package" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="module-test.input_output.test_email">
+<span id="test-input-output-test-email-module"></span><h2>test.input_output.test_email module<a class="headerlink" href="#module-test.input_output.test_email" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="test.input_output.test_email.TestEmail">
+<em class="property">class </em><code class="descclassname">test.input_output.test_email.</code><code class="descname">TestEmail</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#test.input_output.test_email.TestEmail" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<blockquote>
+<div><p>Tests the methods of the Email class</p>
+<dl class="method">
+<dt id="test.input_output.test_email.TestEmail.test_extract_server">
+<code class="descclassname">TestEmail.</code><code class="descname">test_extract_server</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.input_output.test_email.TestEmail.test_extract_server" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Unitary test for the input_output.Email.extract_server method. 
+Tests that the server name is correctly extracted when an email adress is given.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-test.input_output.test_recorder">
+<span id="test-input-output-test-recorder-module"></span><h2>test.input_output.test_recorder module<a class="headerlink" href="#module-test.input_output.test_recorder" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="test.input_output.test_recorder.TestRecorder">
+<em class="property">class </em><code class="descclassname">test.input_output.test_recorder.</code><code class="descname">TestRecorder</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#test.input_output.test_recorder.TestRecorder" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<blockquote>
+<div><p>Tests the methods of the Recorder class</p>
+<dl class="method">
+<dt id="test.input_output.test_recorder.TestRecorder.recordTooShortCreation">
+<code class="descclassname">TestRecorder.</code><code class="descname">recordTooShortCreation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.input_output.test_recorder.TestRecorder.recordTooShortCreation" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Creates a record too short, this method should raise an RuntimeError.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="test.input_output.test_recorder.TestRecorder.setUp">
+<code class="descclassname">TestRecorder.</code><code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.input_output.test_recorder.TestRecorder.setUp" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Inits each tests, creating a Recorder object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="test.input_output.test_recorder.TestRecorder.test_getFrames">
+<code class="descclassname">TestRecorder.</code><code class="descname">test_getFrames</code><span class="sig-paren">(</span><em>testedList=[1, 2, 3]</em><span class="sig-paren">)</span><a class="headerlink" href="#test.input_output.test_recorder.TestRecorder.test_getFrames" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Tests that the getFrames method returns the frames list and reset it. 
+params:</p>
+<blockquote>
+<div>testedList -&gt; the list used in the test</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="test.input_output.test_recorder.TestRecorder.test_newFrame">
+<code class="descclassname">TestRecorder.</code><code class="descname">test_newFrame</code><span class="sig-paren">(</span><em>data=1</em><span class="sig-paren">)</span><a class="headerlink" href="#test.input_output.test_recorder.TestRecorder.test_newFrame" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Unitary test for the input_output.recorder.Recorder.newFrame() method.
+Tests that a new frame is created when the newFrame method is called. 
+The return of this method is tested also.
+params:</p>
+<blockquote>
+<div>data -&gt; the added data in the test</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="test.input_output.test_recorder.TestRecorder.test_record">
+<code class="descclassname">TestRecorder.</code><code class="descname">test_record</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.input_output.test_recorder.TestRecorder.test_record" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Tests the behaviour of the start and stop methods.
+A recording is started and stopped, the file must be created and must have the WAV format.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="test.input_output.test_recorder.TestRecorder.test_recordTooShortException">
+<code class="descclassname">TestRecorder.</code><code class="descname">test_recordTooShortException</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.input_output.test_recorder.TestRecorder.test_recordTooShortException" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Tests that an RuntimeException is raised when a record too short is created</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-test.input_output">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-test.input_output" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">test.input_output package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-test.input_output.test_email">test.input_output.test_email module</a></li>
+<li><a class="reference internal" href="#module-test.input_output.test_recorder">test.input_output.test_recorder module</a></li>
+<li><a class="reference internal" href="#module-test.input_output">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/code.rst/test.input_output.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Maud Beguey, Hugo Martin, Pierre-François Monville, Guilhem Piat.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/code.rst/test.input_output.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,10 @@
+Auto generated documentation
+============================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 3
+   :glob:
+
+   code/*

@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>test.analysis package &mdash; documentation perfect_melody 1.0.0</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="documentation perfect_melody 1.0.0" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="test-analysis-package">
+<h1>test.analysis package<a class="headerlink" href="#test-analysis-package" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="test-analysis-fft-pda-module">
+<h2>test.analysis.fft_pda module<a class="headerlink" href="#test-analysis-fft-pda-module" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="module-test.analysis.test_analyzer">
+<span id="test-analysis-test-analyzer-module"></span><h2>test.analysis.test_analyzer module<a class="headerlink" href="#module-test.analysis.test_analyzer" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="test.analysis.test_analyzer.PlaceHolderPopup">
+<em class="property">class </em><code class="descclassname">test.analysis.test_analyzer.</code><code class="descname">PlaceHolderPopup</code><a class="headerlink" href="#test.analysis.test_analyzer.PlaceHolderPopup" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="class">
+<dt id="test.analysis.test_analyzer.TestAnalyzer">
+<em class="property">class </em><code class="descclassname">test.analysis.test_analyzer.</code><code class="descname">TestAnalyzer</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_analyzer.TestAnalyzer" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<blockquote>
+<div><p>Test class for analysis.analyzer.Analyzer class</p>
+<dl class="method">
+<dt id="test.analysis.test_analyzer.TestAnalyzer.test_analyze">
+<code class="descclassname">TestAnalyzer.</code><code class="descname">test_analyze</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_analyzer.TestAnalyzer.test_analyze" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Unitary test for the analysis.analyzer.Analyzer.analyze() method .
+Tests that two tests are running when the analyse is started.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-test.analysis.test_pitch_analyzer">
+<span id="test-analysis-test-pitch-analyzer-module"></span><h2>test.analysis.test_pitch_analyzer module<a class="headerlink" href="#module-test.analysis.test_pitch_analyzer" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="test.analysis.test_pitch_analyzer.TestPitchAnalyzer">
+<em class="property">class </em><code class="descclassname">test.analysis.test_pitch_analyzer.</code><code class="descname">TestPitchAnalyzer</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_pitch_analyzer.TestPitchAnalyzer" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<blockquote>
+<div><p>Tests the methods of PitchAnalyzer Class</p>
+<dl class="method">
+<dt id="test.analysis.test_pitch_analyzer.TestPitchAnalyzer.test_detectPitch">
+<code class="descclassname">TestPitchAnalyzer.</code><code class="descname">test_detectPitch</code><span class="sig-paren">(</span><em>fileName='test/toast.wav'</em>, <em>windowDuration=0.015</em><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_pitch_analyzer.TestPitchAnalyzer.test_detectPitch" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Tests the return of the analysis.pitch_analyzer.PitchAnalyzer.detectPitch() method.
+It should return a ndarray containing the estimated pitches.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="test.analysis.test_pitch_analyzer.TestPitchAnalyzer.test_pyaapt">
+<code class="descclassname">TestPitchAnalyzer.</code><code class="descname">test_pyaapt</code><span class="sig-paren">(</span><em>fileName='test/toast.wav'</em>, <em>windowDuration=0.015</em><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_pitch_analyzer.TestPitchAnalyzer.test_pyaapt" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Unitary tests for the analysis.pitch_analyzer.PitchAnalyzer.yaapt() methode.
+It should return a PitchObj containing a ndarray named values.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-test.analysis.test_pitch_cleaner">
+<span id="test-analysis-test-pitch-cleaner-module"></span><h2>test.analysis.test_pitch_cleaner module<a class="headerlink" href="#module-test.analysis.test_pitch_cleaner" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="test.analysis.test_pitch_cleaner.TestPitchCleaner">
+<em class="property">class </em><code class="descclassname">test.analysis.test_pitch_cleaner.</code><code class="descname">TestPitchCleaner</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_pitch_cleaner.TestPitchCleaner" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<blockquote>
+<div><p>Tests the methods of the PitchCleaner class</p>
+<dl class="method">
+<dt id="test.analysis.test_pitch_cleaner.TestPitchCleaner.test_trim">
+<code class="descclassname">TestPitchCleaner.</code><code class="descname">test_trim</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_pitch_cleaner.TestPitchCleaner.test_trim" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Unitary test for the PitchCleaner.trim() method.
+This method remove silence at the beginning and end of the detected pitches.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-test.analysis.test_pitch_parser">
+<span id="test-analysis-test-pitch-parser-module"></span><h2>test.analysis.test_pitch_parser module<a class="headerlink" href="#module-test.analysis.test_pitch_parser" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="test.analysis.test_pitch_parser.TestPitchParser">
+<em class="property">class </em><code class="descclassname">test.analysis.test_pitch_parser.</code><code class="descname">TestPitchParser</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_pitch_parser.TestPitchParser" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">unittest.case.TestCase</span></code></p>
+<blockquote>
+<div><p>Test class for PitchParser</p>
+<dl class="method">
+<dt id="test.analysis.test_pitch_parser.TestPitchParser.test_ToMidi">
+<code class="descclassname">TestPitchParser.</code><code class="descname">test_ToMidi</code><span class="sig-paren">(</span><em>pitches=[(440, 69), (1318, 88)]</em><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_pitch_parser.TestPitchParser.test_ToMidi" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>params:</dt>
+<dd><ul class="first last simple">
+<li>pitches : list of (Hz pitch, MIDI pitch) couples</li>
+</ul>
+</dd>
+<dt>description :</dt>
+<dd>testDoFFTs() is the unit test function for analysis.pitch_parser.PitchParser.toMidi()
+It tests that each detected pitch in the given list is approximate to the closest midi value.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="test.analysis.test_pitch_parser.TestPitchParser.test_createScore">
+<code class="descclassname">TestPitchParser.</code><code class="descname">test_createScore</code><span class="sig-paren">(</span><em>pulse=24</em><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_pitch_parser.TestPitchParser.test_createScore" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>unitary test for the PitchParser.createScore method
+It test that the score object is correctly created and containing the correct Note.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="test.analysis.test_pitch_parser.TestPitchParser.test_removeShortNotes">
+<code class="descclassname">TestPitchParser.</code><code class="descname">test_removeShortNotes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_pitch_parser.TestPitchParser.test_removeShortNotes" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Unitary test for the  PitchParser.removeShortNotes method
+It tests that the notes under min duration are removed or added to the nearest note.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="test.analysis.test_pitch_parser.TestPitchParser.test_toNote">
+<code class="descclassname">TestPitchParser.</code><code class="descname">test_toNote</code><span class="sig-paren">(</span><em>midi=[69, 69, 69, 23, 23, 23, 23, 23, 23], sr=22050</em><span class="sig-paren">)</span><a class="headerlink" href="#test.analysis.test_pitch_parser.TestPitchParser.test_toNote" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Unitary test for the method PitchParser.toNote().
+It tests that the correct list of notes is returned within the midi input.</p>
+<dl class="docutils">
+<dt>params: </dt>
+<dd>midi(list) -&gt; the midi input used for the test</dd>
+</dl>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-test.analysis">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-test.analysis" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">test.analysis package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#test-analysis-fft-pda-module">test.analysis.fft_pda module</a></li>
+<li><a class="reference internal" href="#module-test.analysis.test_analyzer">test.analysis.test_analyzer module</a></li>
+<li><a class="reference internal" href="#module-test.analysis.test_pitch_analyzer">test.analysis.test_pitch_analyzer module</a></li>
+<li><a class="reference internal" href="#module-test.analysis.test_pitch_cleaner">test.analysis.test_pitch_cleaner module</a></li>
+<li><a class="reference internal" href="#module-test.analysis.test_pitch_parser">test.analysis.test_pitch_parser module</a></li>
+<li><a class="reference internal" href="#module-test.analysis">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/code.rst/test.analysis.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Maud Beguey, Hugo Martin, Pierre-François Monville, Guilhem Piat.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/code.rst/test.analysis.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

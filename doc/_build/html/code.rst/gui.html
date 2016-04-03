@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>gui package &mdash; documentation perfect_melody 1.0.0</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="documentation perfect_melody 1.0.0" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gui-package">
+<h1>gui package<a class="headerlink" href="#gui-package" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="module-gui.button">
+<span id="gui-button-module"></span><h2>gui.button module<a class="headerlink" href="#module-gui.button" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="gui.button.EmailButton">
+<em class="property">class </em><code class="descclassname">gui.button.</code><code class="descname">EmailButton</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.button.EmailButton" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.button.Button</span></code></p>
+<blockquote>
+<div><p>This Button sends an email with a MIDI attachment.</p>
+<dl class="method">
+<dt id="gui.button.EmailButton.exportEmail">
+<code class="descclassname">EmailButton.</code><code class="descname">exportEmail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.button.EmailButton.exportEmail" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Creates a pop-up object which sends an email to the specified address.</p>
+</dd></dl>
+
+</div></blockquote>
+<dl class="class">
+<dt id="gui.button.ExportButton">
+<em class="property">class </em><code class="descclassname">gui.button.</code><code class="descname">ExportButton</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.button.ExportButton" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.button.Button</span></code></p>
+<blockquote>
+<div><p>This Button exports a score to the MIDI format.</p>
+<dl class="method">
+<dt id="gui.button.ExportButton.exportMidi">
+<code class="descclassname">ExportButton.</code><code class="descname">exportMidi</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.button.ExportButton.exportMidi" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Creates a file explorer popup which allows the user to save the file at the desired location.</p>
+</dd></dl>
+
+</div></blockquote>
+<dl class="class">
+<dt id="gui.button.PlayButton">
+<em class="property">class </em><code class="descclassname">gui.button.</code><code class="descname">PlayButton</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.button.PlayButton" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.button.Button</span></code></p>
+<blockquote>
+<div><p>This Button plays a midi file</p>
+<dl class="method">
+<dt id="gui.button.PlayButton.playFile">
+<code class="descclassname">PlayButton.</code><code class="descname">playFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.button.PlayButton.playFile" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Creates a pop-up object which plays the midi file in the application</p>
+</dd></dl>
+
+</div></blockquote>
+<dl class="class">
+<dt id="gui.button.RecordButton">
+<em class="property">class </em><code class="descclassname">gui.button.</code><code class="descname">RecordButton</code><span class="sig-paren">(</span><em>**kwarg</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.button.RecordButton" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.button.Button</span></code></p>
+<blockquote>
+<div><p>Starts and stops a recording and saves the wave file.</p>
+<dl class="method">
+<dt id="gui.button.RecordButton.toggle">
+<code class="descclassname">RecordButton.</code><code class="descname">toggle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.button.RecordButton.toggle" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Starts or stops the recording depending of the value of the  _recording attributes.
+When the recording is stopped, the analysis is launched from the ScreenManager.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-gui.errorGUI">
+<span id="gui-errorgui-module"></span><h2>gui.errorGUI module<a class="headerlink" href="#module-gui.errorGUI" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="gui.errorGUI.ErrorGUI">
+<em class="property">class </em><code class="descclassname">gui.errorGUI.</code><code class="descname">ErrorGUI</code><a class="headerlink" href="#gui.errorGUI.ErrorGUI" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<blockquote>
+<div><p>Class handling the display of errors on the user interface.</p>
+<dl class="staticmethod">
+<dt id="gui.errorGUI.ErrorGUI.displayError">
+<em class="property">static </em><code class="descclassname">ErrorGUI.</code><code class="descname">displayError</code><span class="sig-paren">(</span><em>errorTitle='Error'</em>, <em>message='An error as Ocurred'</em>, <em>windowSize=(300</em>, <em>200)</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.errorGUI.ErrorGUI.displayError" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a runtime error on the GUI.
+params:</p>
+<blockquote>
+<div>errorTitle (str) -&gt; the error&#8217;s title
+message (str) -&gt; the message to display
+windowSize (tuple) -&gt; the popup&#8217;s size. Defaults to (300, 200)</div></blockquote>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="gui.errorGUI.ErrorGUI.fatalError">
+<em class="property">static </em><code class="descclassname">ErrorGUI.</code><code class="descname">fatalError</code><span class="sig-paren">(</span><em>errorTitle='Fatal error'</em>, <em>message='A critical error as occured'</em>, <em>windowSize=(300</em>, <em>200)</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.errorGUI.ErrorGUI.fatalError" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a fatal error on the GUI. The application is closed thereafter.
+params:</p>
+<blockquote>
+<div>errorTitle (str) -&gt; the error&#8217;s title
+message (str) -&gt; the message to display
+windowSize (tuple) -&gt; the popup&#8217;s size</div></blockquote>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-gui.popup">
+<span id="gui-popup-module"></span><h2>gui.popup module<a class="headerlink" href="#module-gui.popup" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="gui.popup.AnalyzeInterface">
+<em class="property">class </em><code class="descclassname">gui.popup.</code><code class="descname">AnalyzeInterface</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.popup.AnalyzeInterface" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.popup.Popup</span></code></p>
+<blockquote>
+<div><p>Analysis pop-up. Starts the analysis and displays its progression.
+Can&#8217;t be dismissed before the end of the analysis.</p>
+<dl class="method">
+<dt id="gui.popup.AnalyzeInterface.analyze">
+<code class="descclassname">AnalyzeInterface.</code><code class="descname">analyze</code><span class="sig-paren">(</span><em>fileName='temp.wav'</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.popup.AnalyzeInterface.analyze" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Starts the analysis in an other thread.
+params:</p>
+<blockquote>
+<div>fileName (str) -&gt; the file to analyze</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="gui.popup.AnalyzeInterface.progression">
+<code class="descclassname">AnalyzeInterface.</code><code class="descname">progression</code><a class="headerlink" href="#gui.popup.AnalyzeInterface.progression" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Property that represents a Python object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><cite>defaultvalue</cite>: object type</dt>
+<dd><p class="first last">Specifies the default value of the property.</p>
+</dd>
+<dt><cite>rebind</cite>: bool, defaults to False</dt>
+<dd><p class="first">Whether kv rules using this object as an intermediate attribute
+in a kv rule, will update the bound property when this object
+changes.</p>
+<p>That is the standard behavior is that if there&#8217;s a kv rule
+<code class="docutils literal"><span class="pre">text:</span> <span class="pre">self.a.b.c.d</span></code>, where <code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">b</span></code>, and <code class="docutils literal"><span class="pre">c</span></code> are
+properties with <code class="docutils literal"><span class="pre">rebind</span></code> <code class="docutils literal"><span class="pre">False</span></code> and <code class="docutils literal"><span class="pre">d</span></code> is a
+<code class="xref py py-class docutils literal"><span class="pre">StringProperty</span></code>. Then when the rule is applied, <code class="docutils literal"><span class="pre">text</span></code>
+becomes bound only to <code class="docutils literal"><span class="pre">d</span></code>. If <code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">b</span></code>, or <code class="docutils literal"><span class="pre">c</span></code> change,
+<code class="docutils literal"><span class="pre">text</span></code> still remains bound to <code class="docutils literal"><span class="pre">d</span></code>. Furthermore, if any of them
+were <code class="docutils literal"><span class="pre">None</span></code> when the rule was initially evaluated, e.g. <code class="docutils literal"><span class="pre">b</span></code> was
+<code class="docutils literal"><span class="pre">None</span></code>; then <code class="docutils literal"><span class="pre">text</span></code> is bound to <code class="docutils literal"><span class="pre">b</span></code> and will not become bound
+to <code class="docutils literal"><span class="pre">d</span></code> even when <code class="docutils literal"><span class="pre">b</span></code> is changed to not be <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<p class="last">By setting <code class="docutils literal"><span class="pre">rebind</span></code> to <code class="docutils literal"><span class="pre">True</span></code>, however, the rule will be
+re-evaluated and all the properties rebound when that intermediate
+property changes. E.g. in the example above, whenever <code class="docutils literal"><span class="pre">b</span></code> changes
+or becomes not <code class="docutils literal"><span class="pre">None</span></code> if it was <code class="docutils literal"><span class="pre">None</span></code> before, <code class="docutils literal"><span class="pre">text</span></code> is
+evaluated again and becomes rebound to <code class="docutils literal"><span class="pre">d</span></code>. The overall result is
+that <code class="docutils literal"><span class="pre">text</span></code> is now bound to all the properties among <code class="docutils literal"><span class="pre">a</span></code>,
+<code class="docutils literal"><span class="pre">b</span></code>, or <code class="docutils literal"><span class="pre">c</span></code> that have <code class="docutils literal"><span class="pre">rebind</span></code> set to <code class="docutils literal"><span class="pre">True</span></code>.</p>
+</dd>
+<dt><cite>**kwargs</cite>: a list of keyword arguments</dt>
+<dd><dl class="first last docutils">
+<dt><cite>baseclass</cite></dt>
+<dd><p class="first last">If kwargs includes a <cite>baseclass</cite> argument, this value will be
+used for validation: <cite>isinstance(value, kwargs[&#8216;baseclass&#8217;])</cite>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Avertissement</p>
+<p class="last">To mark the property as changed, you must reassign a new python object.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Modifié dans la version 1.9.0: </span><cite>rebind</cite> has been introduced.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Modifié dans la version 1.7.0: </span><cite>baseclass</cite> parameter added.</p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="gui.popup.AnalyzeInterface.score">
+<code class="descclassname">AnalyzeInterface.</code><code class="descname">score</code><a class="headerlink" href="#gui.popup.AnalyzeInterface.score" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Property that represents a Python object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><cite>defaultvalue</cite>: object type</dt>
+<dd><p class="first last">Specifies the default value of the property.</p>
+</dd>
+<dt><cite>rebind</cite>: bool, defaults to False</dt>
+<dd><p class="first">Whether kv rules using this object as an intermediate attribute
+in a kv rule, will update the bound property when this object
+changes.</p>
+<p>That is the standard behavior is that if there&#8217;s a kv rule
+<code class="docutils literal"><span class="pre">text:</span> <span class="pre">self.a.b.c.d</span></code>, where <code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">b</span></code>, and <code class="docutils literal"><span class="pre">c</span></code> are
+properties with <code class="docutils literal"><span class="pre">rebind</span></code> <code class="docutils literal"><span class="pre">False</span></code> and <code class="docutils literal"><span class="pre">d</span></code> is a
+<code class="xref py py-class docutils literal"><span class="pre">StringProperty</span></code>. Then when the rule is applied, <code class="docutils literal"><span class="pre">text</span></code>
+becomes bound only to <code class="docutils literal"><span class="pre">d</span></code>. If <code class="docutils literal"><span class="pre">a</span></code>, <code class="docutils literal"><span class="pre">b</span></code>, or <code class="docutils literal"><span class="pre">c</span></code> change,
+<code class="docutils literal"><span class="pre">text</span></code> still remains bound to <code class="docutils literal"><span class="pre">d</span></code>. Furthermore, if any of them
+were <code class="docutils literal"><span class="pre">None</span></code> when the rule was initially evaluated, e.g. <code class="docutils literal"><span class="pre">b</span></code> was
+<code class="docutils literal"><span class="pre">None</span></code>; then <code class="docutils literal"><span class="pre">text</span></code> is bound to <code class="docutils literal"><span class="pre">b</span></code> and will not become bound
+to <code class="docutils literal"><span class="pre">d</span></code> even when <code class="docutils literal"><span class="pre">b</span></code> is changed to not be <code class="docutils literal"><span class="pre">None</span></code>.</p>
+<p class="last">By setting <code class="docutils literal"><span class="pre">rebind</span></code> to <code class="docutils literal"><span class="pre">True</span></code>, however, the rule will be
+re-evaluated and all the properties rebound when that intermediate
+property changes. E.g. in the example above, whenever <code class="docutils literal"><span class="pre">b</span></code> changes
+or becomes not <code class="docutils literal"><span class="pre">None</span></code> if it was <code class="docutils literal"><span class="pre">None</span></code> before, <code class="docutils literal"><span class="pre">text</span></code> is
+evaluated again and becomes rebound to <code class="docutils literal"><span class="pre">d</span></code>. The overall result is
+that <code class="docutils literal"><span class="pre">text</span></code> is now bound to all the properties among <code class="docutils literal"><span class="pre">a</span></code>,
+<code class="docutils literal"><span class="pre">b</span></code>, or <code class="docutils literal"><span class="pre">c</span></code> that have <code class="docutils literal"><span class="pre">rebind</span></code> set to <code class="docutils literal"><span class="pre">True</span></code>.</p>
+</dd>
+<dt><cite>**kwargs</cite>: a list of keyword arguments</dt>
+<dd><dl class="first last docutils">
+<dt><cite>baseclass</cite></dt>
+<dd><p class="first last">If kwargs includes a <cite>baseclass</cite> argument, this value will be
+used for validation: <cite>isinstance(value, kwargs[&#8216;baseclass&#8217;])</cite>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">Avertissement</p>
+<p class="last">To mark the property as changed, you must reassign a new python object.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Modifié dans la version 1.9.0: </span><cite>rebind</cite> has been introduced.</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Modifié dans la version 1.7.0: </span><cite>baseclass</cite> parameter added.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.popup.AnalyzeInterface.setProgress">
+<code class="descclassname">AnalyzeInterface.</code><code class="descname">setProgress</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.popup.AnalyzeInterface.setProgress" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Sets the progress of the analysis in a progress bar and label.
+This method should be executed in Kivy&#8217;s main thread and is called when progression has changed.
+params:</p>
+<blockquote>
+<div><a href="#id1"><span class="problematic" id="id2">*</span></a>args -&gt; This method is called automatically and Kivy passes unused params.</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.popup.AnalyzeInterface.setScore">
+<code class="descclassname">AnalyzeInterface.</code><code class="descname">setScore</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.popup.AnalyzeInterface.setScore" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Sets the score on the current screen and dismisses the popup.
+This method should be executed by the main Kivy thread and is called when score value has changed
+params:</p>
+<blockquote>
+<div><a href="#id3"><span class="problematic" id="id4">*</span></a>args -&gt; This method is called automatically and Kivy passes unused params.</div></blockquote>
+</dd></dl>
+
+</div></blockquote>
+<dl class="class">
+<dt id="gui.popup.EmailInterface">
+<em class="property">class </em><code class="descclassname">gui.popup.</code><code class="descname">EmailInterface</code><span class="sig-paren">(</span><em>score</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.popup.EmailInterface" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.popup.Popup</span></code></p>
+<blockquote>
+<div><p>Email sender pop up. Allows to send a email containing a midi file.</p>
+<dl class="attribute">
+<dt id="gui.popup.EmailInterface.email_password">
+<code class="descclassname">EmailInterface.</code><code class="descname">email_password</code><a class="headerlink" href="#gui.popup.EmailInterface.email_password" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Property that represents a string value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><cite>defaultvalue</cite>: string, defaults to &#8216;&#8217;</dt>
+<dd><p class="first last">Specifies the default value of the property.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="gui.popup.EmailInterface.email_recipient">
+<code class="descclassname">EmailInterface.</code><code class="descname">email_recipient</code><a class="headerlink" href="#gui.popup.EmailInterface.email_recipient" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Property that represents a string value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><cite>defaultvalue</cite>: string, defaults to &#8216;&#8217;</dt>
+<dd><p class="first last">Specifies the default value of the property.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="gui.popup.EmailInterface.email_subject">
+<code class="descclassname">EmailInterface.</code><code class="descname">email_subject</code><a class="headerlink" href="#gui.popup.EmailInterface.email_subject" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Property that represents a string value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><cite>defaultvalue</cite>: string, defaults to &#8216;&#8217;</dt>
+<dd><p class="first last">Specifies the default value of the property.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.popup.EmailInterface.send_email">
+<code class="descclassname">EmailInterface.</code><code class="descname">send_email</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.popup.EmailInterface.send_email" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Sends the e-mail at the choosen adress. The sender and receiver use the same adress.
+Neither adress nor password are saved in the application.
+The popup is automatically closed after the e-mail has been sent.</p>
+</dd></dl>
+
+</div></blockquote>
+<dl class="class">
+<dt id="gui.popup.FileInterface">
+<em class="property">class </em><code class="descclassname">gui.popup.</code><code class="descname">FileInterface</code><span class="sig-paren">(</span><em>score</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.popup.FileInterface" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.popup.Popup</span></code></p>
+<blockquote>
+<div><p>FileChooser pop up. Allows to set a location for the MIDI file</p>
+<dl class="method">
+<dt id="gui.popup.FileInterface.getUserInput">
+<code class="descclassname">FileInterface.</code><code class="descname">getUserInput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.popup.FileInterface.getUserInput" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Saves the midi file at the choosen location.
+The file name is completed with a (n) if the choosen name already exists.
+The popup is automatically closed after the execution of this method</p>
+</dd></dl>
+
+</div></blockquote>
+<dl class="class">
+<dt id="gui.popup.PlayInterface">
+<em class="property">class </em><code class="descclassname">gui.popup.</code><code class="descname">PlayInterface</code><span class="sig-paren">(</span><em>score</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.popup.PlayInterface" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.popup.Popup</span></code></p>
+<blockquote>
+<div><p>Midi player popup. Handles the playing of a midi file in the application.</p>
+<dl class="method">
+<dt id="gui.popup.PlayInterface.playMidiFile">
+<code class="descclassname">PlayInterface.</code><code class="descname">playMidiFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.popup.PlayInterface.playMidiFile" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Play the MIDI file associated to the score argument.
+The score is exported to a midi file and played by the application.
+Then, the file is removed and the pop up is automatically closed.</p>
+<p>This code is inspired by <a class="reference external" href="https://www.daniweb.com/programming/software-development/code/216979/embed-and-play-midi-music-in-your-code-python">https://www.daniweb.com/programming/software-development/code/216979/embed-and-play-midi-music-in-your-code-python</a>.</p>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-gui.scorewidget">
+<span id="gui-scorewidget-module"></span><h2>gui.scorewidget module<a class="headerlink" href="#module-gui.scorewidget" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="gui.scorewidget.MeasureWidget">
+<em class="property">class </em><code class="descclassname">gui.scorewidget.</code><code class="descname">MeasureWidget</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.widget.Widget</span></code></p>
+<blockquote>
+<div><p>Displays a score measure. 
+Displays each note and silence on the measure. Uses a bass and treble clef to display score information.</p>
+<dl class="attribute">
+<dt id="gui.scorewidget.MeasureWidget.LINE_SEPARATION">
+<code class="descclassname">MeasureWidget.</code><code class="descname">LINE_SEPARATION</code><em class="property"> = 10</em><a class="headerlink" href="#gui.scorewidget.MeasureWidget.LINE_SEPARATION" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="gui.scorewidget.MeasureWidget.NOTES_DIAMETER">
+<code class="descclassname">MeasureWidget.</code><code class="descname">NOTES_DIAMETER</code><em class="property"> = 10</em><a class="headerlink" href="#gui.scorewidget.MeasureWidget.NOTES_DIAMETER" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="gui.scorewidget.MeasureWidget.NOTES_LETTER">
+<code class="descclassname">MeasureWidget.</code><code class="descname">NOTES_LETTER</code><em class="property"> = 'CDEFGAB'</em><a class="headerlink" href="#gui.scorewidget.MeasureWidget.NOTES_LETTER" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="gui.scorewidget.MeasureWidget.NOTES_WIDTH">
+<code class="descclassname">MeasureWidget.</code><code class="descname">NOTES_WIDTH</code><em class="property"> = 1.1</em><a class="headerlink" href="#gui.scorewidget.MeasureWidget.NOTES_WIDTH" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="gui.scorewidget.MeasureWidget.NUMBER_LINE">
+<code class="descclassname">MeasureWidget.</code><code class="descname">NUMBER_LINE</code><em class="property"> = 5</em><a class="headerlink" href="#gui.scorewidget.MeasureWidget.NUMBER_LINE" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="gui.scorewidget.MeasureWidget.OCTAVES_BASS">
+<code class="descclassname">MeasureWidget.</code><code class="descname">OCTAVES_BASS</code><em class="property"> = [1, 2, 3]</em><a class="headerlink" href="#gui.scorewidget.MeasureWidget.OCTAVES_BASS" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="gui.scorewidget.MeasureWidget.OCTAVES_TREBLE">
+<code class="descclassname">MeasureWidget.</code><code class="descname">OCTAVES_TREBLE</code><em class="property"> = [4, 5, 6]</em><a class="headerlink" href="#gui.scorewidget.MeasureWidget.OCTAVES_TREBLE" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="gui.scorewidget.MeasureWidget.START_LINE_BASS">
+<code class="descclassname">MeasureWidget.</code><code class="descname">START_LINE_BASS</code><em class="property"> = 130</em><a class="headerlink" href="#gui.scorewidget.MeasureWidget.START_LINE_BASS" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="gui.scorewidget.MeasureWidget.START_LINE_TREBLE">
+<code class="descclassname">MeasureWidget.</code><code class="descname">START_LINE_TREBLE</code><em class="property"> = 30</em><a class="headerlink" href="#gui.scorewidget.MeasureWidget.START_LINE_TREBLE" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="gui.scorewidget.MeasureWidget.START_STEP">
+<code class="descclassname">MeasureWidget.</code><code class="descname">START_STEP</code><em class="property"> = 70</em><a class="headerlink" href="#gui.scorewidget.MeasureWidget.START_STEP" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addCrotchet">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addCrotchet</code><span class="sig-paren">(</span><em>pos_x</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addCrotchet" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a Crotchet rest at pos_x
+params: pos_x (int) -&gt; the x position of the rest</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addEighth">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addEighth</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addEighth" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays an eighth note at pos_x,pos_y 
+params: pos_x (int) -&gt; the x position of the note</p>
+<blockquote>
+<div>pos_y (int) -&gt; the y position of the note</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addFlat">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addFlat</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addFlat" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Adds a flat transformation beside the note
+params: pos_x (int) -&gt; the x coordinate of the note</p>
+<blockquote>
+<div>pos_y (int) -&gt; the y coordinate of the note</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addHalf">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addHalf</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addHalf" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a half note at pos_x,pos_y 
+params: pos_x (int) -&gt; the x position of the note</p>
+<blockquote>
+<div>pos_y (int) -&gt; the y position of the note</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addMinim">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addMinim</code><span class="sig-paren">(</span><em>pos_x</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addMinim" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a minim at pos_x
+params:</p>
+<blockquote>
+<div>pos_x (int) -&gt; the x position of the rest</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addNatural">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addNatural</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addNatural" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Adds a natural transformation beside the note
+params: pos_x (int) -&gt; the x coordinate of the note</p>
+<blockquote>
+<div>pos_y (int) -&gt; the y coordinate of the note</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addQuarter">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addQuarter</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addQuarter" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a quarter note at pos_x,pos_y 
+params: pos_x (int) -&gt; the x position of the note</p>
+<blockquote>
+<div>pos_y (int) -&gt; the y position of the note</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addQuaver">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addQuaver</code><span class="sig-paren">(</span><em>pos_x</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addQuaver" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a Quaver rest at pos_x
+params: pos_x (int) -&gt; the x position of the rest</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addSemiBreve">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addSemiBreve</code><span class="sig-paren">(</span><em>pos_x</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addSemiBreve" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a semi breve at pos_x
+params:</p>
+<blockquote>
+<div>pos_x (int) -&gt; the x position of the rest</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addSemiQuaver">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addSemiQuaver</code><span class="sig-paren">(</span><em>pos_x</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addSemiQuaver" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a Semi-Quaver rest at pos_x
+params: pos_x (int) -&gt; the x position of the rest</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addSharp">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addSharp</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addSharp" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Adds a sharp transformation beside the note
+params: pos_x (int) -&gt; the x coordinate of the note</p>
+<blockquote>
+<div>pos_y (int) -&gt; the y coordinate of the note</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addSixteenth">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addSixteenth</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addSixteenth" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a sixteenth note at pos_x,pos_y 
+params: pos_x (int) -&gt; the x position of the note</p>
+<blockquote>
+<div>pos_y (int) -&gt; the y position of the note</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.addWhole">
+<code class="descclassname">MeasureWidget.</code><code class="descname">addWhole</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.addWhole" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a whole note at pos_x,pos_y 
+params: pos_x (int) -&gt; the x position of the note</p>
+<blockquote>
+<div>pos_y (int) -&gt; the y position of the note</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.completeLine">
+<code class="descclassname">MeasureWidget.</code><code class="descname">completeLine</code><span class="sig-paren">(</span><em>pos_x</em>, <em>pos_y</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.completeLine" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays all the invisible lines separating the notes and the score 
+params:</p>
+<blockquote>
+<div>pos_x(int) -&gt; x position of the note
+pos_y(int) -&gt; y position of the note</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.display">
+<code class="descclassname">MeasureWidget.</code><code class="descname">display</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.display" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays the _measure attribute on the widget
+params:</p>
+<blockquote>
+<div><a href="#id5"><span class="problematic" id="id6">*</span></a>args -&gt; graphical instruction sent when the size has changed. Not used in the method.</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.getXPosition">
+<code class="descclassname">MeasureWidget.</code><code class="descname">getXPosition</code><span class="sig-paren">(</span><em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.getXPosition" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Returns the x coordinate of the note in the measure. 
+params:</p>
+<blockquote>
+<div>note (note.Note) -&gt; note to display</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.getYPosition">
+<code class="descclassname">MeasureWidget.</code><code class="descname">getYPosition</code><span class="sig-paren">(</span><em>note</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.getYPosition" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Returns the y coordinate of the note in the measure. 
+params:</p>
+<blockquote>
+<div>note (note.Note) -&gt; note to display</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.setKey">
+<code class="descclassname">MeasureWidget.</code><code class="descname">setKey</code><span class="sig-paren">(</span><em>flag</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.setKey" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Initializes the positionning for the key of the current note, depending of the flag params.
+params:</p>
+<blockquote>
+<div>flag (boolean) -&gt; true if it&#8217;s treble, false otherwise.</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.MeasureWidget.setMeasure">
+<code class="descclassname">MeasureWidget.</code><code class="descname">setMeasure</code><span class="sig-paren">(</span><em>measure</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.MeasureWidget.setMeasure" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Sets the measure to display. The measure is saved in the _measure attribute. 
+It updates note positions when the widget size is changed. 
+params:</p>
+<blockquote>
+<div>measure (stream.Measure) -&gt; the measure to display</div></blockquote>
+</dd></dl>
+
+</div></blockquote>
+<dl class="class">
+<dt id="gui.scorewidget.ScoreLayout">
+<em class="property">class </em><code class="descclassname">gui.scorewidget.</code><code class="descname">ScoreLayout</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.ScoreLayout" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.boxlayout.BoxLayout</span></code></p>
+<blockquote>
+<div>Displays a score page.
+Contains a list of StaveWidget, displayed vertically.</div></blockquote>
+<dl class="class">
+<dt id="gui.scorewidget.ScoreWidget">
+<em class="property">class </em><code class="descclassname">gui.scorewidget.</code><code class="descname">ScoreWidget</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.ScoreWidget" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.pagelayout.PageLayout</span></code></p>
+<blockquote>
+<div><p>Displays a complete score. 
+A treble and bass clef are used to display 6 octaves.
+The score can be displayed on multiple pages.</p>
+<p>Contains a list of ScoreLayout, displayed on its different pages</p>
+<dl class="method">
+<dt id="gui.scorewidget.ScoreWidget.displayScore">
+<code class="descclassname">ScoreWidget.</code><code class="descname">displayScore</code><span class="sig-paren">(</span><em>score</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.ScoreWidget.displayScore" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays the _score object on the widget.
+params:</p>
+<blockquote>
+<div>score -&gt; The score to display</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.ScoreWidget.init">
+<code class="descclassname">ScoreWidget.</code><code class="descname">init</code><span class="sig-paren">(</span><em>measureNumber</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.ScoreWidget.init" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Inits the widgets architecure for the next score to display.
+Creates all the pages needed to display the score. Then, initializes the _measureWidget attribute.
+params:</p>
+<blockquote>
+<div>measureNumber (int) -&gt; number of measures in the score to display</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.ScoreWidget.initPages">
+<code class="descclassname">ScoreWidget.</code><code class="descname">initPages</code><span class="sig-paren">(</span><em>nbPages</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.ScoreWidget.initPages" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Considering a given number of pages, resets the display of all existing needed pages.
+Then, pages are created/removed, depending of the needed number of page for the next score.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gui.scorewidget.ScoreWidget.on_touch_up">
+<code class="descclassname">ScoreWidget.</code><code class="descname">on_touch_up</code><span class="sig-paren">(</span><em>touch</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.ScoreWidget.on_touch_up" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>This method fixes a kivy bug.
+The parent method is called only if there is more than two score pages.
+params:</p>
+<blockquote>
+<div>touch -&gt; the touch event</div></blockquote>
+</dd></dl>
+
+</div></blockquote>
+<dl class="class">
+<dt id="gui.scorewidget.StaveLayout">
+<em class="property">class </em><code class="descclassname">gui.scorewidget.</code><code class="descname">StaveLayout</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.scorewidget.StaveLayout" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.boxlayout.BoxLayout</span></code></p>
+<blockquote>
+<div>Displays a score stave.
+Contains a list of MeasureWidget, displayed horizontally</div></blockquote>
+</div>
+<div class="section" id="module-gui.screen">
+<span id="gui-screen-module"></span><h2>gui.screen module<a class="headerlink" href="#module-gui.screen" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="gui.screen.Manager">
+<em class="property">class </em><code class="descclassname">gui.screen.</code><code class="descname">Manager</code><a class="headerlink" href="#gui.screen.Manager" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.screenmanager.ScreenManager</span></code></p>
+<blockquote>
+<div><p>Class handling the transition beetween screens. 
+Contains A RecordScreen and a ScoreScreen.
+A SlideTransition is used and the transition is started when a recording has been completed.</p>
+<dl class="attribute">
+<dt id="gui.screen.Manager.ANALYZED_FILE">
+<code class="descclassname">Manager.</code><code class="descname">ANALYZED_FILE</code><em class="property"> = 'temp.wav'</em><a class="headerlink" href="#gui.screen.Manager.ANALYZED_FILE" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="gui.screen.Manager.analyze">
+<code class="descclassname">Manager.</code><code class="descname">analyze</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.screen.Manager.analyze" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Starts the analysis on the ANALYZED_FILE.
+Once the score is created, it displays it on the score screen</p>
+</dd></dl>
+
+</div></blockquote>
+<dl class="class">
+<dt id="gui.screen.PerfectMelodyApp">
+<em class="property">class </em><code class="descclassname">gui.screen.</code><code class="descname">PerfectMelodyApp</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.screen.PerfectMelodyApp" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.app.App</span></code></p>
+<blockquote>
+<div><p>Main class in the application.</p>
+<dl class="method">
+<dt id="gui.screen.PerfectMelodyApp.build">
+<code class="descclassname">PerfectMelodyApp.</code><code class="descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gui.screen.PerfectMelodyApp.build" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</div></blockquote>
+<dl class="class">
+<dt id="gui.screen.RecordScreen">
+<em class="property">class </em><code class="descclassname">gui.screen.</code><code class="descname">RecordScreen</code><span class="sig-paren">(</span><em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.screen.RecordScreen" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.screenmanager.Screen</span></code></p>
+<blockquote>
+<div>The application&#8217;s record screen</div></blockquote>
+<dl class="class">
+<dt id="gui.screen.ScoreScreen">
+<em class="property">class </em><code class="descclassname">gui.screen.</code><code class="descname">ScoreScreen</code><span class="sig-paren">(</span><em>**kw</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.screen.ScoreScreen" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Bases: <code class="xref py py-class docutils literal"><span class="pre">kivy.uix.screenmanager.Screen</span></code></p>
+<blockquote>
+<div><p>The application&#8217;s score display screen</p>
+<dl class="method">
+<dt id="gui.screen.ScoreScreen.setScore">
+<code class="descclassname">ScoreScreen.</code><code class="descname">setScore</code><span class="sig-paren">(</span><em>score=None</em><span class="sig-paren">)</span><a class="headerlink" href="#gui.screen.ScoreScreen.setScore" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Displays a score on the score widget and defines the score to export/send/play into each button 
+params:</p>
+<blockquote>
+<div>score (music21.stream.Score) -&gt; the score to display on the screen.</div></blockquote>
+</dd></dl>
+
+</div></blockquote>
+</div>
+<div class="section" id="module-gui">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-gui" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table des Matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">gui package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-gui.button">gui.button module</a></li>
+<li><a class="reference internal" href="#module-gui.errorGUI">gui.errorGUI module</a></li>
+<li><a class="reference internal" href="#module-gui.popup">gui.popup module</a></li>
+<li><a class="reference internal" href="#module-gui.scorewidget">gui.scorewidget module</a></li>
+<li><a class="reference internal" href="#module-gui.screen">gui.screen module</a></li>
+<li><a class="reference internal" href="#module-gui">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/code.rst/gui.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Recherche rapide</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Maud Beguey, Hugo Martin, Pierre-François Monville, Guilhem Piat.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/code.rst/gui.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

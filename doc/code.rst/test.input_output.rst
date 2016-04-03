@@ -1,0 +1,30 @@
+test.input_output package
+=========================
+
+Submodules
+----------
+
+test.input_output.test_email module
+-----------------------------------
+
+.. automodule:: test.input_output.test_email
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+test.input_output.test_recorder module
+--------------------------------------
+
+.. automodule:: test.input_output.test_recorder
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: test.input_output
+    :members:
+    :undoc-members:
+    :show-inheritance:

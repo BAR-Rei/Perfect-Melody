@@ -1,0 +1,329 @@
+#:kivy 1.0.9
+
+######################################### BUTTON ######################################### 
+
+<RecordButton>:
+    background_normal: 'gui/resources/button.png'
+    background_down: 'gui/resources/button_down.png'
+    allow_stretch: True
+    auto_scale: False
+    pos_hint: {'center_x':.5, 'center_y': .5}
+    size_hint_x: None
+    size_hint_y: None
+    on_press: self.toggle()
+    on_release: self.toggle()
+    
+   
+
+<ExportButton>
+    on_press: self.exportMidi()
+    allow_stretch: True
+    auto_scale: False
+    pos_hint: {'center_x':.5, 'center_y': .5}
+    size_hint_x: None
+    size_hint_y: None
+    background_normal: 'gui/resources/export_button.png'
+    background_down: 'gui/resources/export_button.png'
+
+
+<EmailButton>
+    on_press: self.exportEmail()
+    allow_stretch: True
+    auto_scale: False
+    pos_hint: {'center_x':.5, 'center_y': .5}
+    size_hint_x: None
+    size_hint_y: None
+    background_normal: 'gui/resources/email.png'
+    background_down: 'gui/resources/email_down.png'
+
+<PlayButton>
+    on_press: self.playFile()
+    allow_stretch: True
+    auto_scale: False
+    pos_hint: {'center_x':.5, 'center_y': .5}
+    size_hint_x: None
+    size_hint_y: None
+    background_normal: 'gui/resources/play.png'
+    background_down: 'gui/resources/play_down.png'
+
+######################################### POP-UP ######################################### 
+
+<AnalyzeInterface>
+    size_hint: 0.8, 0.2
+    auto_dismiss: False
+    title: 'Analyse en cours'
+    on_open: self.analyze()
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            id: label
+        ProgressBar:
+            id: progress
+
+
+<FileInterface>
+    size_hint: 0.8, 0.8
+    title: 'FILE CHOOSER'
+    BoxLayout:
+        orientation: "vertical"
+        FileChooserIconView:
+            id: fileChooser
+            size_hint: (1, 0.9)
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint: (1, 0.1)
+            TextInput:
+                id: textInput
+                multiline: False
+                size_hint: (0.8, 1)
+                on_text_validate: root.getUserInput()
+                
+            Button: 
+                size_hint: (0.2, 1)
+                text: "Save"
+                on_press: root.getUserInput()
+
+
+
+<EmailInterface>
+
+    email_recipient: recipient.text
+    email_password: password.text
+    email_subject: subject.text
+
+    size_hint: 0.8, 0.4
+    title: 'SEND EMAIL'
+
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: 'Address Email :'
+            TextInput:
+                id: recipient
+        BoxLayout:
+            orientation: "horizontal"
+            Label:
+                text: 'Password :'
+            TextInput:
+                password: True
+                id: password
+        BoxLayout:
+            Label:
+                text: 'Subject :'
+            TextInput:
+                id: subject
+        Button:
+            size_hint: (1, 1)
+            text: "SEND"
+            on_release: root.send_email()
+
+<PlayInterface>
+    size_hint: 0.8, 0.4
+    title: 'PLAY MIDI FILE'
+    on_open: self.playMidiFile()
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            id: label
+        ProgressBar:
+            id: PlayProgress
+
+###################################### SCORE DISPLAYING ######################################
+
+<MeasureWidget>
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos 
+            size: self.size
+
+    canvas:
+        Color:
+            rgba: 0, 0,  0, 1
+
+        # Measure creation
+        ## Treble clef
+        Line:
+            width: 1.1
+            points: [self.x, self.top - self.START_LINE_TREBLE, self.x + self.width, self.top - self.START_LINE_TREBLE]
+        Line:
+            width: 1.1
+            points: [self.x, self.top - (self.START_LINE_TREBLE + self.LINE_SEPARATION), self.x + self.width, self.top - (self.START_LINE_TREBLE + self.LINE_SEPARATION)]
+        Line:
+            width: 1.1
+            points: [self.x, self.top - (self.START_LINE_TREBLE + self.LINE_SEPARATION*2), self.x + self.width, self.top - (self.START_LINE_TREBLE + self.LINE_SEPARATION*2)]
+        Line:
+            width: 1.1
+            points: [self.x, self.top - (self.START_LINE_TREBLE + self.LINE_SEPARATION*3), self.x + self.width, self.top -(self.START_LINE_TREBLE + self.LINE_SEPARATION*3)]
+        Line:
+            width: 1.1
+            points: [self.x, self.top - (self.START_LINE_TREBLE + self.LINE_SEPARATION*4), self.x + self.width , self.top - (self.START_LINE_TREBLE + self.LINE_SEPARATION*4)]
+
+        # Measure's end
+        Line:
+            width: 1.1
+            points: [self.x + self.width, self.top - self.START_LINE_TREBLE, self.x + self.width, self.top - (self.START_LINE_TREBLE + self.LINE_SEPARATION*4)]
+        Line:
+            width: 1.1
+            points: [self.x, self.top - self.START_LINE_TREBLE, self.x, self.top - (self.START_LINE_TREBLE + self.LINE_SEPARATION*4)]
+
+
+        ## Bass key
+        Line:
+            width: 1.1
+            points: [self.x, self.top - self.START_LINE_BASS, self.x + self.width, self.top - self.START_LINE_BASS]
+        Line:
+            width: 1.1
+            points: [self.x, self.top - (self.START_LINE_BASS + self.LINE_SEPARATION), self.x + self.width, self.top - (self.START_LINE_BASS + self.LINE_SEPARATION)]
+        Line:
+            width: 1.1
+            points: [self.x, self.top - (self.START_LINE_BASS + self.LINE_SEPARATION*2), self.x + self.width, self.top - (self.START_LINE_BASS + self.LINE_SEPARATION*2)]
+        Line:
+            width: 1.1
+            points: [self.x, self.top - (self.START_LINE_BASS + self.LINE_SEPARATION*3), self.x + self.width, self.top -(self.START_LINE_BASS + self.LINE_SEPARATION*3)]
+        Line:
+            width: 1.1
+            points: [self.x, self.top - (self.START_LINE_BASS + self.LINE_SEPARATION*4), self.x + self.width , self.top - (self.START_LINE_BASS + self.LINE_SEPARATION*4)]
+
+        # Measure's end
+        Line:
+            width: 1.1
+            points: [self.x + self.width, self.top - self.START_LINE_BASS, self.x + self.width, self.top - (self.START_LINE_BASS + self.LINE_SEPARATION*4)]
+        Line:
+            width: 1.1
+            points: [self.x, self.top - self.START_LINE_BASS, self.x, self.top - (self.START_LINE_BASS + self.LINE_SEPARATION*4)]
+
+
+        
+
+      
+
+
+<StaveLayout>
+    orientation: "horizontal"
+    padding: 15, 0, 15, 0
+    size: root.size
+    pos: root.pos
+
+    MeasureWidget:
+        size_hint: (0.55, 1)
+
+        canvas:
+            Line:
+                width: 1.1
+                points: [self.x, self.top - self.START_LINE_TREBLE, self.x, self.top - (self.START_LINE_BASS + self.LINE_SEPARATION*4)]
+
+        Image:
+            source: 'gui/resources/clef_de_sol.png'
+            size: 75, 75
+            pos: self.parent.x, self.parent.top - (self.parent.START_LINE_TREBLE + self.parent.LINE_SEPARATION*5 + self.parent.LINE_SEPARATION/2)
+
+        Label:
+            color: (0, 0, 0, 1)
+            text: "[b]4\n4[/b]"
+            text_size: 8, None
+            markup: True
+            pos: self.parent.x + 10, self.parent.top - (self.parent.START_LINE_TREBLE + self.parent.LINE_SEPARATION*7)
+
+        Image:
+            source: 'gui/resources/clef_de_fa.png'
+            size: 45, 45
+            pos: self.parent.x, self.parent.top - (self.parent.START_LINE_BASS + self.parent.LINE_SEPARATION*4)
+
+        Label:
+            color: (0, 0, 0, 1)
+            text: "[b]4\n4[/b]"
+            text_size: 8, None
+            markup: True
+            pos: self.parent.x + 10, self.parent.top - (self.parent.START_LINE_BASS + self.parent.LINE_SEPARATION*7)
+
+
+    MeasureWidget:
+        size_hint: (0.45, 1)
+
+
+
+<ScoreLayout> 
+    orientation: "vertical"
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos 
+            size: self.size
+
+    StaveLayout: 
+
+    StaveLayout:
+
+
+<ScoreWidget>
+    border: 10
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos 
+            size: self.size
+
+    ScoreLayout:
+
+
+
+
+########################################################## SCREENS ############################################################
+
+<RecordScreen>:
+    canvas:
+        Color:
+            rgb: (0.16, 0.19, 0.23)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    
+    RecordButton:
+    	size: self.parent.width/1.5, self.parent.width/1.5
+        pos_hint: {'center_x':.5, 'center_y': .5}
+
+
+        
+<ScoreScreen>:
+    canvas:
+        Color:
+            rgb: (0.16, 0.19, 0.23)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        size: self.parent.size
+        pos: self.parent.pos
+        orientation: "vertical"
+
+        ScoreWidget:
+            size_hint: (1, 0.80)
+            id: _scoreDisplayer
+            
+        FloatLayout:
+            size_hint:(1, 0.2)
+            RecordButton:
+                size: self.parent.height, self.parent.height
+                pos_hint: {'x': 0.05}
+            PlayButton:
+                id: _MidiPlayer
+                size: self.parent.height, self.parent.height
+                pos_hint: {'x': 0.3}
+            ExportButton:
+                id: _scoreSaver
+                size: self.parent.height, self.parent.height
+                pos_hint: {'right': 0.7}
+            EmailButton:
+                id: _emailSender
+                size: self.parent.height, self.parent.height
+                pos_hint: {'right': 0.95}
