@@ -1,0 +1,27 @@
+Introduction: what this project is all about
+============================================
+
+
+The birth of perfect melody
+***************************
+
+It all started with four colleagues and friends gathered to accomplish the great project of the
+second semester of their last year in Licence of "mathématiques et informatiques" at Paris Descartes.
+
+It's all about music
+********************
+
+All the team's members love music and what you can do with it, and since there were very few softwares similar to perfect melody it was the perfect choice.
+
+
+Capture every creative moments
+******************************
+
+Imagine, you walk on the street and you come across a melody of your own, you know it's the perfect one, the one that will shake the foundation of music and of course, when you get home it has disappeared.
+With perfect melody, you can capture every drop of imagination and compose the best melody yet to be heard.
+
+
+Export to the world
+*******************
+
+With perfect melody, you can send you masterpiece to yourself via email, or save it in your computer before spreading it to all humankind.

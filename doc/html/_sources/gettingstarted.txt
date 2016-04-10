@@ -1,0 +1,28 @@
+Getting Started
+==========================================
+
+launch the application
+**********************
+
+You have to click on the shortcut or launch the .pyw script in the installation folder.
+
+
+Record yourself
+***************
+
+There should be a big button with a microphone in front of you.
+You can press it, it's safe, you won't be responsible for any nuclear explosions.(we fixed that)
+It's a press to record button, so as soon as you put off your finger from the left click of your mouse, your voice will stop being recorded.
+
+Score Screen
+************
+
+In the next window will be displayed the score obtained from the recording.
+You have two clefs which represent the whole palette of the human voice.
+
+below you'll find (from left to right):
+
+* A microphone button to record yourself again (that will erase the current score)
+* A play button so that you can hear you lovely voice transformed into an electronic piano which will try to perform as well as you did
+* An email button that allows you to send the MIDI file to your email address (only Hotmail, Outlook, Gmail are currently only)
+* A save button that can save your MIDI file in wherever you want your perfection to be preserved

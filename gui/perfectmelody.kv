@@ -51,7 +51,7 @@
 <AnalyzeInterface>
     size_hint: 0.8, 0.2
     auto_dismiss: False
-    title: 'Analyse en cours'
+    title: 'Analysis in progress'
     on_open: self.analyze()
     BoxLayout:
         orientation: "vertical"
@@ -132,6 +132,7 @@
 
 ###################################### SCORE DISPLAYING ######################################
 
+## Graphical instruction for the MeasuerWidget
 <MeasureWidget>
 
     canvas.before:
@@ -198,11 +199,7 @@
             points: [self.x, self.top - self.START_LINE_BASS, self.x, self.top - (self.START_LINE_BASS + self.LINE_SEPARATION*4)]
 
 
-        
-
-      
-
-
+## Graphical instructions for the StaveLayout
 <StaveLayout>
     orientation: "horizontal"
     padding: 15, 0, 15, 0
@@ -246,7 +243,7 @@
         size_hint: (0.45, 1)
 
 
-
+## Graphical instructions for the ScoreLayout
 <ScoreLayout> 
     orientation: "vertical"
 
@@ -261,7 +258,7 @@
 
     StaveLayout:
 
-
+## Graphical instructions for the ScoreWidget
 <ScoreWidget>
     border: 10
     

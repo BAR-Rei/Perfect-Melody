@@ -37,16 +37,16 @@ class RecordButton(Button):
             except RuntimeError as e:
                 error.ErrorGUI.displayError(errorTitle = "Record error", message="Record too short", windowSize = (400,100))
                 return
+            except PermissionError as e:
+                error.ErrorGui.displayError(errorTitle = "Permission error", message="You are not allowed to save a file here", windowSize = (400,100))
 
             # Getting ScreenManager 
             screenManager = self.parent
             while not issubclass(type(screenManager), ScreenManager):
                 screenManager = screenManager.parent
 
-            try:
-                screenManager.analyze()
-            except IndexError: 
-                error.ErrorGUI.displayError("IndexError", "the record is too short")
+            screenManager.analyze()
+
 
                 
 class ExportButton(Button):

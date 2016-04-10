@@ -1,0 +1,54 @@
+test.analysis package
+=====================
+
+Submodules
+----------
+
+test.analysis.fft_pda module
+----------------------------
+
+.. automodule:: test.analysis.fft_pda
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+test.analysis.test_analyzer module
+----------------------------------
+
+.. automodule:: test.analysis.test_analyzer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+test.analysis.test_pitch_analyzer module
+----------------------------------------
+
+.. automodule:: test.analysis.test_pitch_analyzer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+test.analysis.test_pitch_cleaner module
+---------------------------------------
+
+.. automodule:: test.analysis.test_pitch_cleaner
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+test.analysis.test_pitch_parser module
+--------------------------------------
+
+.. automodule:: test.analysis.test_pitch_parser
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: test.analysis
+    :members:
+    :undoc-members:
+    :show-inheritance:

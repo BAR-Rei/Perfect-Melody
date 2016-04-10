@@ -102,7 +102,7 @@ class FileInterface(Popup):
         try:
             self.score.write("midi", fileName)
         except PermissionError:
-            error.ErrorGUI.displayError("You are not allowed to save this file here")
+            error.ErrorGUI.displayError("Permission Error","You are not allowed to save this file here")
         self.dismiss()    
 
 

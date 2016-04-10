@@ -50,7 +50,12 @@ class Email:
         text = msg.as_string()
 
         # find the server in the string write by the user
-        addrToSend = Email.extract_server(email_recipient)
+        addrToSend = ""
+        try:
+        	addrToSend = Email.extract_server(email_recipient)
+        except Exception:
+        	error.ErrorGUI.displayError("Email Error", "No e-mail address")
+        	return
 
         # connexion to the server STMP
         try:
@@ -69,7 +74,7 @@ class Email:
 
             # error
             if(addrToSend == ""):
-                error.ErrorGUI.displayError("Email Error", "Please note that only gmail, hotmail or outlook addresses\ncan send an email")
+                error.ErrorGUI.displayError("Email Error", "Please note that only gmail, \nhotmail or outlook addresses\ncan send an email")
             # connect to the server
             else:
                 server = smtplib.SMTP(serverAddr, port)
@@ -99,6 +104,7 @@ class Email:
 
         except smtplib.SMTPHeloError :
             error.ErrorGUI.displayError("Email Error", "The server refused smtp's HELO message.")
+
         except socket.gaierror :
             error.ErrorGUI.displayError("Internet Error", "It seems you have no internet connection.")            
 

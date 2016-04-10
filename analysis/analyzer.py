@@ -27,23 +27,23 @@ class Analyzer:
             This method is executed in a different thread, in order not to block the GUI.
             This method should not be called directly. Call analyze().
         """
-        self.popup.progression = (0, "Détection du tempo")
+        self.popup.progression = (0, "Tempo detection")
         try:
             pulse = PitchAnalyzer.detectTempo(self.fileName)
         except IndexError:
             error.ErrorGUI.displayError("IndexError", "the record is too short")
             return
         try:
-            self.popup.progression = (10, "Détection des hauteurs")
+            self.popup.progression = (10, "Pitch detection")
             midi = PitchAnalyzer.detectPitch(self.fileName)
         except NameError as e:
             error.ErrorGUI.displayError("NameError", "unresolved problem with pYAAPT.py\nlast time it was line 509\nmore on that\n" + str(e.args))
         
-        self.popup.progression = (50, "Lissage")
+        self.popup.progression = (50, "Smoothing")
         midi = PitchCleaner.smooth(midi)
         midi = PitchCleaner.trim(midi)
 
-        self.popup.progression = (70, "Création de la partition")
+        self.popup.progression = (70, "Score creation")
         notes = PitchParser.toNote(midi)
         notes = PitchParser.removeShortNotes(notes)
 
@@ -53,7 +53,7 @@ class Analyzer:
 
         self.score = final
         
-        self.popup.progression = (100, "Analyse terminée")
+        self.popup.progression = (100, "Analysis done")
         self.popup.score = self.score
 
 
